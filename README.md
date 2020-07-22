@@ -6,7 +6,7 @@
  - Send push messages to your EASY-Smarthome App or Smartha app
  - (DE) Senden von Push Nachrichten an deine EASY-Smarthome App oder Smartha App
  
-Forum: https://homematic-forum.de/forum/viewtopic.php?
+Forum: https://homematic-forum.de/forum/viewtopic.php?f=77&t=59997
 
 
 https://github.com/Matten-Matten/Redmatic-EASY-Push-Flow/blob/master/Redmatic-EASY-Push-Flow.json
