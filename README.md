@@ -1,4 +1,4 @@
-# **Redmatic EASY Push** ![picture](https://www.cloudmatic.de/member/img/CloudMaticLogo.png)
+# **Redmatic EASY Push** ![picture](https://avatars3.githubusercontent.com/u/5375661?s=50&v=4)
 ## `V 0.0.1`
 
 ### Dieser Subflow ist NUR für Redmatic auf einer CCU3/Raspberrymatic!
