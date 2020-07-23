@@ -1,9 +1,9 @@
 [
     {
-        "id": "6643bdfa.5a11c4",
+        "id": "5f774723.7c2a28",
         "type": "subflow",
         "name": "EASY Push",
-        "info": "![Logo](https://www.cloudmatic.de/member/img/CloudMaticLogo.png)\n# **Redmatic EASY Push**\nSenden von Push Nachrichten an deine EASY-Smarthome APP oder Smartha App\n\n_V.0.1_\n\n_Dieser Subflow ist NUR für Redmatic auf einer CCU3/Raspberrymatic!_\n\n\n---\n# **Input:**\n - msg.topic = ( _Event bzw. Betreff_ )\n \n _ist msg.topic leer dann wird der Betreff aus den Properties gesetzt._\n\n - msg.payload = ( _Nachricht_ )\n\n---\nSubflow made by [Matten Matten](https://github.com/Matten-Matten/Redmatic-EASY-Push-Flow/blob/master/README.md)",
+        "info": "![Logo](https://www.cloudmatic.de/img/CloudMaticLogo.png)\n# **Redmatic EASY Push**\nSenden von Push Nachrichten an deine EASY-Smarthome APP oder Smartha App\n\n_V 0.0.2_\n\n## _Dieser Subflow ist NUR für Redmatic auf einer CCU3/Raspberrymatic!_\n\n\n---\n# **Input:**\n - msg.topic = ( _Event bzw. Betreff_ )\n \n _ist msg.topic leer dann wird der Betreff aus den Properties gesetzt._\n\n - msg.payload = ( _Nachricht_ )\n\n---\nSubflow made by [Matten Matten](https://github.com/Matten-Matten/Redmatic-EASY-Push-Flow/blob/master/README.md)",
         "category": "Messenger",
         "in": [
             {
@@ -11,7 +11,7 @@
                 "y": 160,
                 "wires": [
                     {
-                        "id": "cedd2d08.7eeda"
+                        "id": "234844b9.d86aec"
                     }
                 ]
             }
@@ -19,12 +19,25 @@
         "out": [],
         "env": [
             {
+                "name": "",
+                "type": "str",
+                "value": "",
+                "ui": {
+                    "icon": "font-awesome/fa-exclamation",
+                    "label": {
+                        "en-US": "Dieser Subflow ist NUR für Redmatic auf einer CCU3/Raspberrymatic!"
+                    },
+                    "type": "none",
+                    "opts": {}
+                }
+            },
+            {
                 "name": "Version",
                 "type": "str",
                 "value": "",
                 "ui": {
                     "label": {
-                        "en-US": "Version: 0.0.1"
+                        "en-US": "Version: 0.0.2"
                     },
                     "type": "none",
                     "opts": {}
@@ -114,40 +127,40 @@
             "y": 320,
             "wires": [
                 {
-                    "id": "7bce7579.e234cc",
+                    "id": "f646f4b4.4798a8",
                     "port": 0
                 },
                 {
-                    "id": "bcffba68.b2aa48",
+                    "id": "e12821c8.c330a",
                     "port": 0
                 },
                 {
-                    "id": "5dd60472.ebc45c",
+                    "id": "e7fc5806.0f36d8",
                     "port": 0
                 },
                 {
-                    "id": "54d79af2.af83b4",
+                    "id": "7a9c9296.66c16c",
                     "port": 0
                 },
                 {
-                    "id": "13c2ebe9.8263a4",
+                    "id": "68cd91e4.8c274",
                     "port": 0
                 },
                 {
-                    "id": "11436b9.7b83e94",
+                    "id": "29711893.f1f508",
                     "port": 0
                 },
                 {
-                    "id": "dd25943b.a2f6a8",
+                    "id": "f13fd3a1.0e633",
                     "port": 0
                 }
             ]
         }
     },
     {
-        "id": "55f43729.dc99f8",
+        "id": "715dd81b.862658",
         "type": "change",
-        "z": "6643bdfa.5a11c4",
+        "z": "5f774723.7c2a28",
         "name": "%20",
         "rules": [
             {
@@ -178,14 +191,14 @@
         "y": 140,
         "wires": [
             [
-                "1c8732c2.e265dd"
+                "f6103726.a134f8"
             ]
         ]
     },
     {
-        "id": "ebecbfb0.ca6c9",
+        "id": "716b9cde.9c57b4",
         "type": "function",
-        "z": "6643bdfa.5a11c4",
+        "z": "5f774723.7c2a28",
         "name": "zusammen",
         "func": "msg.payload = (\" ESY:\" + msg.API + \" +\" + msg.topic + \" +\" + msg.payload);\nreturn msg;",
         "outputs": 1,
@@ -194,15 +207,15 @@
         "y": 140,
         "wires": [
             [
-                "aa9cc029.5d924",
-                "5dd60472.ebc45c"
+                "781e410.67bfac",
+                "e7fc5806.0f36d8"
             ]
         ]
     },
     {
-        "id": "aa9cc029.5d924",
+        "id": "781e410.67bfac",
         "type": "exec",
-        "z": "6643bdfa.5a11c4",
+        "z": "5f774723.7c2a28",
         "command": "/bin/sh /etc/config/addons/mh/prowl.sh",
         "addpay": true,
         "append": "",
@@ -215,17 +228,17 @@
         "wires": [
             [],
             [
-                "928ec66a.97baa8"
+                "e45af916.ce1d98"
             ],
             [
-                "2ec2eaf2.4fe426"
+                "4cad873d.2be2c8"
             ]
         ]
     },
     {
-        "id": "86509cd.cd9fa6",
+        "id": "e2865728.f5a2b8",
         "type": "change",
-        "z": "6643bdfa.5a11c4",
+        "z": "5f774723.7c2a28",
         "name": "msg.topic",
         "rules": [
             {
@@ -245,14 +258,14 @@
         "y": 180,
         "wires": [
             [
-                "55f43729.dc99f8"
+                "715dd81b.862658"
             ]
         ]
     },
     {
-        "id": "5dd60472.ebc45c",
+        "id": "e7fc5806.0f36d8",
         "type": "function",
-        "z": "6643bdfa.5a11c4",
+        "z": "5f774723.7c2a28",
         "name": "Nachricht wird gesendet ...",
         "func": "msg.payload = \"Nachricht wird gesendet ...\";\nmsg.payload = {fill:\"yellow\",shape:\"ring\",text:\"Nachricht wird gesendet ...\"};\nreturn msg;",
         "outputs": 1,
@@ -264,9 +277,9 @@
         ]
     },
     {
-        "id": "bcffba68.b2aa48",
+        "id": "e12821c8.c330a",
         "type": "function",
-        "z": "6643bdfa.5a11c4",
+        "z": "5f774723.7c2a28",
         "name": "OK",
         "func": "msg.payload = {fill:\"green\",shape:\"dot\",text:\"OK\"};\nreturn msg;",
         "outputs": 1,
@@ -278,9 +291,9 @@
         ]
     },
     {
-        "id": "f410def7.49c5",
+        "id": "4d706c97.fabba4",
         "type": "delay",
-        "z": "6643bdfa.5a11c4",
+        "z": "5f774723.7c2a28",
         "name": "",
         "pauseType": "delay",
         "timeout": "1500",
@@ -296,14 +309,14 @@
         "y": 400,
         "wires": [
             [
-                "7bce7579.e234cc"
+                "f646f4b4.4798a8"
             ]
         ]
     },
     {
-        "id": "7bce7579.e234cc",
+        "id": "f646f4b4.4798a8",
         "type": "function",
-        "z": "6643bdfa.5a11c4",
+        "z": "5f774723.7c2a28",
         "name": "error!",
         "func": "//msg.status = {fill:\"green\",shape:\"dot\",text:\"hi\"};\nmsg.payload = {fill:\"red\",shape:\"ring\",text:\"error:\" + msg.error.message};\nreturn msg;",
         "outputs": 1,
@@ -315,9 +328,9 @@
         ]
     },
     {
-        "id": "14367260.34a0ee",
+        "id": "6c11c3ae.e1fa8c",
         "type": "switch",
-        "z": "6643bdfa.5a11c4",
+        "z": "5f774723.7c2a28",
         "name": "DEBUG",
         "property": "DEBUG",
         "propertyType": "env",
@@ -333,14 +346,14 @@
         "y": 40,
         "wires": [
             [
-                "d8627f4e.31a33"
+                "13246113.d3120f"
             ]
         ]
     },
     {
-        "id": "d8627f4e.31a33",
+        "id": "13246113.d3120f",
         "type": "debug",
-        "z": "6643bdfa.5a11c4",
+        "z": "5f774723.7c2a28",
         "name": "EASY Push Debug",
         "active": true,
         "tosidebar": true,
@@ -353,9 +366,9 @@
         "wires": []
     },
     {
-        "id": "cedd2d08.7eeda",
+        "id": "234844b9.d86aec",
         "type": "switch",
-        "z": "6643bdfa.5a11c4",
+        "z": "5f774723.7c2a28",
         "name": "API OK",
         "property": "API",
         "propertyType": "env",
@@ -379,20 +392,20 @@
         "y": 160,
         "wires": [
             [
-                "faa47015.7b066"
+                "8d3dd3fb.b1a35"
             ],
             [
-                "2988667.da9c79a"
+                "15845a0e.944e36"
             ],
             [
-                "f3a900f4.bb22b"
+                "98c4efc9.80821"
             ]
         ]
     },
     {
-        "id": "54d79af2.af83b4",
+        "id": "7a9c9296.66c16c",
         "type": "function",
-        "z": "6643bdfa.5a11c4",
+        "z": "5f774723.7c2a28",
         "name": "error!",
         "func": "msg.payload = {fill:\"red\",shape:\"dot\",text:\"API-Key fehlt!\"};\nreturn msg;",
         "outputs": 1,
@@ -404,26 +417,26 @@
         ]
     },
     {
-        "id": "418ebecb.733b8",
+        "id": "69cc2860.c7d948",
         "type": "catch",
-        "z": "6643bdfa.5a11c4",
+        "z": "5f774723.7c2a28",
         "name": "",
         "scope": [
-            "aa9cc029.5d924"
+            "781e410.67bfac"
         ],
         "uncaught": false,
         "x": 740,
         "y": 400,
         "wires": [
             [
-                "f410def7.49c5"
+                "4d706c97.fabba4"
             ]
         ]
     },
     {
-        "id": "2988667.da9c79a",
+        "id": "15845a0e.944e36",
         "type": "switch",
-        "z": "6643bdfa.5a11c4",
+        "z": "5f774723.7c2a28",
         "name": "TOPIC",
         "property": "topic",
         "propertyType": "msg",
@@ -442,58 +455,58 @@
         "y": 160,
         "wires": [
             [
-                "55f43729.dc99f8"
+                "715dd81b.862658"
             ],
             [
-                "86509cd.cd9fa6"
+                "e2865728.f5a2b8"
             ]
         ]
     },
     {
-        "id": "f3a900f4.bb22b",
+        "id": "98c4efc9.80821",
         "type": "link out",
-        "z": "6643bdfa.5a11c4",
+        "z": "5f774723.7c2a28",
         "name": "",
         "links": [
-            "3b7dd86.40f1428"
+            "e86674ca.64a898"
         ],
         "x": 275,
         "y": 200,
         "wires": []
     },
     {
-        "id": "3b7dd86.40f1428",
+        "id": "e86674ca.64a898",
         "type": "link in",
-        "z": "6643bdfa.5a11c4",
+        "z": "5f774723.7c2a28",
         "name": "",
         "links": [
-            "f3a900f4.bb22b",
-            "faa47015.7b066"
+            "98c4efc9.80821",
+            "8d3dd3fb.b1a35"
         ],
         "x": 1015,
         "y": 320,
         "wires": [
             [
-                "54d79af2.af83b4"
+                "7a9c9296.66c16c"
             ]
         ]
     },
     {
-        "id": "faa47015.7b066",
+        "id": "8d3dd3fb.b1a35",
         "type": "link out",
-        "z": "6643bdfa.5a11c4",
+        "z": "5f774723.7c2a28",
         "name": "",
         "links": [
-            "3b7dd86.40f1428"
+            "e86674ca.64a898"
         ],
         "x": 275,
         "y": 120,
         "wires": []
     },
     {
-        "id": "1c8732c2.e265dd",
+        "id": "f6103726.a134f8",
         "type": "change",
-        "z": "6643bdfa.5a11c4",
+        "z": "5f774723.7c2a28",
         "name": "API-Key",
         "rules": [
             {
@@ -513,14 +526,14 @@
         "y": 140,
         "wires": [
             [
-                "ebecbfb0.ca6c9"
+                "716b9cde.9c57b4"
             ]
         ]
     },
     {
-        "id": "22ca124f.307c9e",
+        "id": "6f279028.a56b2",
         "type": "inject",
-        "z": "6643bdfa.5a11c4",
+        "z": "5f774723.7c2a28",
         "name": "",
         "topic": "",
         "payload": "true",
@@ -533,14 +546,14 @@
         "y": 440,
         "wires": [
             [
-                "13c2ebe9.8263a4"
+                "68cd91e4.8c274"
             ]
         ]
     },
     {
-        "id": "13c2ebe9.8263a4",
+        "id": "68cd91e4.8c274",
         "type": "function",
-        "z": "6643bdfa.5a11c4",
+        "z": "5f774723.7c2a28",
         "name": "bereit",
         "func": "msg.payload = {fill:\"green\",shape:\"dot\",text:\"bereit\"};\nreturn msg;",
         "outputs": 1,
@@ -552,9 +565,9 @@
         ]
     },
     {
-        "id": "bf806aeb.6cfae8",
+        "id": "8310a20.addf66",
         "type": "switch",
-        "z": "6643bdfa.5a11c4",
+        "z": "5f774723.7c2a28",
         "name": "code",
         "property": "payload.code",
         "propertyType": "msg",
@@ -580,20 +593,20 @@
         "y": 240,
         "wires": [
             [
-                "bcffba68.b2aa48"
+                "e12821c8.c330a"
             ],
             [
-                "11436b9.7b83e94"
+                "29711893.f1f508"
             ],
             [
-                "dd25943b.a2f6a8"
+                "f13fd3a1.0e633"
             ]
         ]
     },
     {
-        "id": "11436b9.7b83e94",
+        "id": "29711893.f1f508",
         "type": "function",
-        "z": "6643bdfa.5a11c4",
+        "z": "5f774723.7c2a28",
         "name": "error!",
         "func": "msg.payload = {fill:\"red\",shape:\"ring\",text:\"error: API Key überprüfen!\"};\nreturn msg;",
         "outputs": 1,
@@ -605,9 +618,9 @@
         ]
     },
     {
-        "id": "dd25943b.a2f6a8",
+        "id": "f13fd3a1.0e633",
         "type": "function",
-        "z": "6643bdfa.5a11c4",
+        "z": "5f774723.7c2a28",
         "name": "error!",
         "func": "msg.payload = {fill:\"red\",shape:\"ring\",text:\"error: code:\" + msg.payload.code};\nreturn msg;",
         "outputs": 1,
@@ -619,71 +632,70 @@
         ]
     },
     {
-        "id": "cc4b557f.e517d8",
+        "id": "23ae75f8.9df73a",
         "type": "link in",
-        "z": "6643bdfa.5a11c4",
+        "z": "5f774723.7c2a28",
         "name": "",
         "links": [
-            "2ec2eaf2.4fe426"
+            "4cad873d.2be2c8"
         ],
         "x": 955,
         "y": 240,
         "wires": [
             [
-                "bf806aeb.6cfae8"
+                "8310a20.addf66"
             ]
         ]
     },
     {
-        "id": "2ec2eaf2.4fe426",
+        "id": "4cad873d.2be2c8",
         "type": "link out",
-        "z": "6643bdfa.5a11c4",
+        "z": "5f774723.7c2a28",
         "name": "",
         "links": [
-            "cc4b557f.e517d8",
-            "23b736af.c5709a"
+            "23ae75f8.9df73a",
+            "36d0db3d.1911c4"
         ],
         "x": 1335,
         "y": 160,
         "wires": []
     },
     {
-        "id": "928ec66a.97baa8",
+        "id": "e45af916.ce1d98",
         "type": "link out",
-        "z": "6643bdfa.5a11c4",
+        "z": "5f774723.7c2a28",
         "name": "",
         "links": [
-            "23b736af.c5709a"
+            "36d0db3d.1911c4"
         ],
         "x": 1335,
         "y": 120,
         "wires": []
     },
     {
-        "id": "23b736af.c5709a",
+        "id": "36d0db3d.1911c4",
         "type": "link in",
-        "z": "6643bdfa.5a11c4",
+        "z": "5f774723.7c2a28",
         "name": "",
         "links": [
-            "2ec2eaf2.4fe426",
-            "928ec66a.97baa8"
+            "4cad873d.2be2c8",
+            "e45af916.ce1d98"
         ],
         "x": 55,
         "y": 40,
         "wires": [
             [
-                "14367260.34a0ee"
+                "6c11c3ae.e1fa8c"
             ]
         ]
     },
     {
-        "id": "4a0e2e5b.a029e",
-        "type": "subflow:6643bdfa.5a11c4",
-        "z": "e053d1f8.10c2a",
+        "id": "bc318c82.351c9",
+        "type": "subflow:5f774723.7c2a28",
+        "z": "332e3228.8f95fe",
         "name": "",
-        "env": [],
-        "x": 930,
-        "y": 2400,
+        "x": 490,
+        "y": 200,
         "wires": []
     }
 ]
