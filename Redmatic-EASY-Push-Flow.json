@@ -3,7 +3,7 @@
         "id": "5f774723.7c2a28",
         "type": "subflow",
         "name": "EASY Push",
-        "info": "![Logo](https://www.cloudmatic.de/img/CloudMaticLogo.png)\n# **Redmatic EASY Push**\nSenden von Push Nachrichten an deine EASY-Smarthome APP oder Smartha App\n\n_V 0.0.2_\n\n## _Dieser Subflow ist NUR für Redmatic auf einer CCU3/Raspberrymatic!_\n\n\n---\n# **Input:**\n - msg.topic = ( _Event bzw. Betreff_ )\n \n _ist msg.topic leer dann wird der Betreff aus den Properties gesetzt._\n\n - msg.payload = ( _Nachricht_ )\n\n---\nSubflow made by [Matten Matten](https://github.com/Matten-Matten/Redmatic-EASY-Push-Flow/blob/master/README.md)",
+        "info": "![Logo](https://www.cloudmatic.de/img/CloudMaticLogo.png)\n# **Redmatic EASY Push**\nSenden von Push Nachrichten an deine EASY-Smarthome APP oder Smartha App\n\n_V 0.0.3_\n\n## _Dieser Subflow ist NUR für Redmatic auf einer CCU3/Raspberrymatic!_\n\n\n---\n# **Input:**\n - msg.topic = ( _Event bzw. Betreff_ )\n \n _ist msg.topic leer dann wird der Betreff aus den Properties gesetzt._\n\n - msg.payload = ( _Nachricht_ )\n\n---\nSubflow made by [Matten Matten](https://github.com/Matten-Matten/Redmatic-EASY-Push-Flow/blob/master/README.md)",
         "category": "Messenger",
         "in": [
             {
@@ -21,7 +21,7 @@
             {
                 "name": "",
                 "type": "str",
-                "value": "",
+                "value": "INFO",
                 "ui": {
                     "icon": "font-awesome/fa-exclamation",
                     "label": {
@@ -32,14 +32,12 @@
                 }
             },
             {
-                "name": "Version",
+                "name": "",
                 "type": "str",
-                "value": "",
+                "value": "LEER",
                 "ui": {
-                    "label": {
-                        "en-US": "Version: 0.0.2"
-                    },
                     "type": "none",
+                    "label": {},
                     "opts": {}
                 }
             },
@@ -63,13 +61,23 @@
             {
                 "name": "",
                 "type": "str",
-                "value": "",
+                "value": "INFO",
                 "ui": {
                     "icon": "font-awesome/fa-info-circle",
                     "label": {
                         "en-US": "Den API-Key erhältst du aus der EASY App bzw. Smartha App"
                     },
                     "type": "none",
+                    "opts": {}
+                }
+            },
+            {
+                "name": "",
+                "type": "str",
+                "value": "LEER",
+                "ui": {
+                    "type": "none",
+                    "label": {},
                     "opts": {}
                 }
             },
@@ -93,13 +101,23 @@
             {
                 "name": "",
                 "type": "str",
-                "value": "",
+                "value": "INFO",
                 "ui": {
                     "icon": "font-awesome/fa-info-circle",
                     "label": {
                         "en-US": "Ist msg.topic leer dann wird der Betreff aus den Properties gesetzt."
                     },
                     "type": "none",
+                    "opts": {}
+                }
+            },
+            {
+                "name": "",
+                "type": "str",
+                "value": "LEER",
+                "ui": {
+                    "type": "none",
+                    "label": {},
                     "opts": {}
                 }
             },
@@ -113,6 +131,38 @@
                         "en-US": "Debug"
                     },
                     "type": "checkbox",
+                    "opts": {}
+                }
+            },
+            {
+                "name": "",
+                "type": "str",
+                "value": "LEER",
+                "ui": {
+                    "type": "none",
+                    "label": {},
+                    "opts": {}
+                }
+            },
+            {
+                "name": "",
+                "type": "str",
+                "value": "LEER",
+                "ui": {
+                    "type": "none",
+                    "label": {},
+                    "opts": {}
+                }
+            },
+            {
+                "name": "Version",
+                "type": "str",
+                "value": "VERSION",
+                "ui": {
+                    "label": {
+                        "en-US": "Version: 0.0.3"
+                    },
+                    "type": "none",
                     "opts": {}
                 }
             }
@@ -690,10 +740,21 @@
         ]
     },
     {
+        "id": "62f1a8a.7633058",
+        "type": "comment",
+        "z": "5f774723.7c2a28",
+        "name": "Description",
+        "info": "# **Redmatic EASY Push**\nSenden von Push Nachrichten an deine EASY-Smarthome APP oder Smartha App\n\n## _Dieser Subflow ist NUR für Redmatic auf einer CCU3/Raspberrymatic!_",
+        "x": 140,
+        "y": 420,
+        "wires": []
+    },
+    {
         "id": "bc318c82.351c9",
         "type": "subflow:5f774723.7c2a28",
         "z": "332e3228.8f95fe",
         "name": "",
+        "env": [],
         "x": 490,
         "y": 200,
         "wires": []
