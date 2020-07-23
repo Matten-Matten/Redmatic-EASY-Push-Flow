@@ -1,6 +1,6 @@
-# **Redmatic EASY Push** ![picture](https://avatars3.githubusercontent.com/u/5375661?s=50&v=4)  ![picture](https://www.cloudmatic.de/amember/application/default/themes/cloudmatic/public/img/CloudMaticLogo.png)
+# **Redmatic EASY Push** ![picture](https://avatars3.githubusercontent.com/u/5375661?s=50&v=4)  ![picture](https://www.cloudmatic.de/img/CloudMaticLogo.png)
 
-## `V 0.0.1`
+## `V 0.0.2`
 
 ### Dieser Subflow ist NUR für Redmatic auf einer CCU3/Raspberrymatic!
 
@@ -36,6 +36,10 @@ https://github.com/Matten-Matten/Redmatic-EASY-Push-Flow/blob/master/Redmatic-EA
 ---
 
 ## Changelog
+
+### 0.0.2 (2020-07-23)
+* (Matten-Matten)       add: `Information added`
+* (Matten-Matten)       add: `fixed missing logo display`
 
 ### 0.0.1 (2020-07-22)
 * (Matten-Matten)       add: `first publication`
